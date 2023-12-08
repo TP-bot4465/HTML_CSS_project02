@@ -40,11 +40,50 @@ a {
     line-height: 50px;
     border-radius: 999px;
     background: #171100;
-
+    cursor: pointer;
 }
 
 .btn:hover {
     opacity: 0.9;
+}
+
+.heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
+.desc {
+    margin-top: 22px;
+    color: #5F5B53;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line2 {
+    --line-clamp: 2;
+}
+
+.word-break-all {
+    word-break: break-all;
 }
 
 /* HEADER */
@@ -201,21 +240,7 @@ a {
     padding: 64px 0 0 130px;
 }
 
-.hero .content-block .heading {
-    color: #171100;
-    font-family: var(--font-heading);
-    font-size: 5.8rem;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: -0.02em;
-}
 
-.content-block .desc {
-    margin-top: 22px;
-    color: #5F5B53;
-    font-size: 1.8rem;
-    line-height: 1.67;
-}
 
 .hero .cta-group {
     display: flex;
@@ -271,4 +296,199 @@ a {
     font-size: 4.4rem;
     line-height: 54px;
     color: #171100;
+}
+
+/* POPULAR */
+
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-top .desc {
+    margin-top: 16px;
+    width: 458px;
+}
+
+.popular-top .controls {
+    display: flex;
+    gap: 18px;
+}
+
+.popular-top .control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+}
+
+.popular-top .control-btn:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.popular .courses-list {
+    display: flex;
+    margin-top: 55px;
+    gap: 30px;
+}
+
+.popular .course-item {
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #E2DFDA;
+    background: #FFF;
+}
+
+.popular .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+}
+
+.popular .course-item .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    margin: -1px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.popular .course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.popular .course-item .foot,
+.popular .course-item .rating,
+.popular .course-item .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .course-item .title a {
+    padding-right: 8px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .rating .value {
+    margin-left: 6px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: var(--primary-color);
+}
+
+.popular .course-item .desc {
+    margin-top: 6px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+.popular .course-item .foot {
+    margin-top: 12px;
+}
+
+.popular .course-item .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .course-item .book-btn {
+    border: none;
+}
+
+.popular .course-item .book-btn:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+
+}
+
+/* FEEDBACK */
+.feedback {
+    margin-top: 135px;
+    padding: 96px 0;
+    background-color: #2E2100;
+}
+
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback-item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.feedback-item .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback-item .info .title {
+    font-family: var(--font-heading);
+    margin-top: 18px;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.42;
+    color: #f7f7f7;
+}
+
+.feedback-item .info .desc {
+    margin-top: 4px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #bfbcb3;
+}
+
+.feedback-item .dots {
+    display: flex;
+    margin-top: 28px;
+}
+
+
+.feedback-item .dot {
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+    cursor: pointer;
+}
+
+.feedback-item .dot.active {
+    background-color: var(--primary-color);
+    cursor: default;
+}
+
+.feedback-item .content {
+    width: 66%;
+    margin-left: auto;
+}
+
+.feedback-item blockquote {
+    margin-left: 30px;
+    font-style: italic;
+    font-size: 2.6rem;
+    line-height: 1.54;
+    color: #fff;
 }
